@@ -1,9 +1,9 @@
 export default function handler(req, res) {
-    const { itemId } = req.body
+    const {id} = req.body
 
-    if(!itemId) {
-        throw new Error('Item ID is required to retrieve an item')
+    if(!id) {
+        res.status(400).json({})
+    } else {
+        res.status(200).json({id: id, name: 'Test item'})
     }
-
-    res.status(200).json({ id: itemId, name: 'Test item' })
 }
