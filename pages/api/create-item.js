@@ -1,22 +1,16 @@
 export default function handler(req, res) {
     const {
-        name, 
-        description, 
-        quantity, 
-        condition, 
-        categoryId, 
-        locationId, 
-        brandId
+        name,
+        description,
+        quantity,
+        condition
     } = req.body
 
     const item = {
         name: name,
         description: description,
         quantity: quantity,
-        condition: condition,
-        categoryId: categoryId,
-        locationId: locationId,
-        brandId: brandId
+        condition: condition
     }
 
     // TODO: validate data.

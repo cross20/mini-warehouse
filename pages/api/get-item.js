@@ -4,6 +4,15 @@ export default function handler(req, res) {
     if(!id) {
         res.status(400).json({})
     } else {
-        res.status(200).json({id: id, name: 'Test item'})
+        const fakeItem = {
+            id: id,
+            name: 'Fake item',
+            description: 'Fake item used for testing purposes.',
+            quantity: 1,
+            condition: 2,
+            createdAt: Date.now()
+        } // TODO: remove fake item.
+
+        res.status(200).json({item: fakeItem})
     }
 }
